@@ -56,7 +56,6 @@ function Pixels() {
         display: "grid",
         gridTemplateColumns: "repeat(10, 1fr)",
         width: "210px",
-        margin: "0 auto",
       }}
     >
       {pixels}
