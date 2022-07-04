@@ -7,19 +7,26 @@ function ColorPicker() {
   return (
     <div>
       <h1>Choose a color</h1>
-      {colors.map((color) => (
-        <button
-          key={color}
-          style={{
-            backgroundColor: color,
-            display: "inline-block",
-            width: "20px",
-            height: "20px",
-            margin: "2px 4px 10px",
-          }}
-          onClick={() => colorCtx.setColor(color)}
-        />
-      ))}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          marginBottom: "10px",
+        }}
+      >
+        {colors.map((color) => (
+          <button
+            key={color}
+            style={{
+              backgroundColor: color,
+              display: "inline-block",
+              width: "20px",
+              height: "20px",
+            }}
+            onClick={() => colorCtx.setColor(color)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
